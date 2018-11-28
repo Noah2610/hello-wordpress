@@ -17,11 +17,6 @@ services:
   php:
     image:          wodby/wordpress-php:$PHP_TAG
     container_name: "${PROJECT_NAME}_php"
-    #build:
-    #  context: .
-    #  dockerfile: ./Dockerfile
-    #  args:
-    #    WODBY_GROUP_ID: 985
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
       DB_HOST:           $DB_HOST
